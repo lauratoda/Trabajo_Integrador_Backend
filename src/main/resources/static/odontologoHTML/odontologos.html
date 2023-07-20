@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Listado Odontólogos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/odontologo/upDateOdontologo.js"></script>
+    <script type="text/javascript" src="/js/odontologo/deleteOdontologo.js"></script>
+    <script type="text/javascript" src="/js/odontologo/getOdontologo.js"></script>
+
+</head>
+<body>
+<nav class="navbar bg-body-tertiary mb-3"  style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <img src="../img/2.png" alt="Logo" width="100" height="100" class="d-inline-block m-2">
+        <h4 class="text-secondary">LISTADO DE ODONTÓLOGOS</h4>
+        <a class="btn btn-outline-secondary my-3 mr-3" href="/logout" role="button">Log Out</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div id="div_odontologo_table">
+        <div class="row col-md-6 table-responsive">
+            <table id="odontologoTable" class="table table-striped my-5">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Matricula</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6" style="display: none;
+											background-color:#e3f2fd; padding:10px; border-radius:3px"
+             id="div_odontologo_updating">
+            <form id="update_odontologo_form">
+                <div class="form-group">
+                    <label>Id:</label>
+                    <input type="text" class="form-control" id="odontologo_id" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Nombre:</label>
+                    <input type="text" class="form-control" placeholder="Nombre" id="nombre">
+                </div>
+                <div class="form-group">
+                    <label>Apellido:</label>
+                    <input type="text" class="form-control" placeholder="Apellido" id="apellido">
+                </div>
+                <div class="form-group">
+                    <label>Matricula:</label>
+                    <input type="text" class="form-control" placeholder="Matricula" id="matricula">
+                </div>
+
+
+                <button type="submit" class="btn btn-outline-secondary m-3">Modificar</button>
+            </form>
+            <div id="response" style="display:none; margin:10px">
+            </div>
+        </div>
+    </div>
+    <hr>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="btn btn-outline-secondary m-3" href="/odontologoHTML/crearOdontologo.html" role="button">Agregar nuevo</a>
+        </li>
+        <li class="nav-item">
+            <a class="btn btn-outline-secondary m-3" href="/index.html" role="button">Volver al Inicio</a>
+        </li>
+    </ul>
+</div>
+</body>
+<footer class="footer fixed-bottom sticky-bottom p-3 mt-3" style="background-color: #6c757d; color: #ffffff;">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div>
+            <span class="text-muted; color: #ffffff;">© 2023 BackEnd II. Todos los derechos reservados.</span>
+        </div>
+        <div>
+            <a href="#" class="social-icon" style="font-size: 20px; color: #ffffff; margin-right: 10px;"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" style="font-size: 20px; color: #ffffff; margin-right: 10px;"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" style="font-size: 20px; color: #ffffff; margin-right: 10px;"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+</html>
